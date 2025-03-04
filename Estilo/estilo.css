@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  transition: ease;
+  scroll-behavior: smooth;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
@@ -12,6 +12,8 @@ body{
 :root {
   --fundo-desfocada: rgba(236, 68, 124, 0.342);
   --font-titulo: #fff;
+  --paragrafos: #49374A;
+  --bordas: #F4DB;
 }
 
 .container-cabecario {
@@ -115,11 +117,18 @@ body{
 
 .container-titulos h2 {
   font-size: 40px;
-  color: #F4DECB;
+  color: var(--bordas);
   padding-top: 40px;
   letter-spacing: 2px;
   text-transform: uppercase;
   
+}
+
+.servico-tipo h3{
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+  color: var(--bordas);
 }
 
 .principal-sobre{
@@ -134,7 +143,7 @@ body{
 
 .principal-sobre p{
   font-size: 18px;
-  color: #49374A;
+  color: var(--paragrafos);
   line-height: 32px;
   width: 90%;
   flex: 1;
@@ -143,9 +152,79 @@ body{
 }
 
 .principal-sobre img{
-  width: 60%;
+  width: 100%;
   flex: 1;
   display: flex;
   justify-content: center;
+  
+}
+
+.servicos-imagem{
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 10px ;
+  border: 3px solid var(--bordas);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 5px var(--fundo-desfocada);
+}
+
+.cilios-estilos{
+  border: 1px solid var(--bordas);
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+.servicos-imagem figure{
+  max-width: 300px;
+  max-height: 300px;
+  text-align: cente;
+  padding: 10px;
  
+}
+
+.servicos-imagem img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5)
+  
+}
+
+.servicos-imagem figcaption{
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--bordas);
+  text-align: center;
+}
+
+.servicos-imagem p{
+  width: 250px;
+  font-size: 16px;
+  color: var(--paragrafos);
+  text-align: left;
+  line-height: 24px;
+  padding: 10px;
+}
+
+.sobrancelha-estilo{
+  width: 550px;
+  height: auto;
+  padding-bottom: 0;
+}
+.sobrancelha-estilo img{
+  width: 150px;
+  height: auto;
+}
+
+.sobrancelha-estilo p{
+  width: 60%;
+  text-align: left;
+  color: var(--paragrafos);
+  padding-bottom: 10px;
 }
