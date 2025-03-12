@@ -6,15 +6,15 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 :root {
   --fundo-desfocada: rgba(236, 68, 124, 0.342);
   --font-titulo: #fff;
   --paragrafos: rgb(140, 35, 182);
   --bordas: #f4db;
+  --cor1gradiente: #cfb4bc
 }
 
-.container-cabecario {
+.container-cabecalho {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,39 +23,39 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(to right, var(--paragrafos), var(--bordas));
+  background: linear-gradient(to right, var(--cor1gradiente), var(--bordas));
   z-index: 1;
 }
 
-.cabecario-logo {
+.cabecalho-logo {
   width: 200px;
   height: 100px;
   margin-left: 100px;
 }
 
-.cabecario-logo img {
+.cabecalho-logo img {
   width: 70%;
   height: 100%;
   background-color: #ffe4ec;
 }
 
-.cabecario-navegacao{
-   width: 100%;
+.cabecalho-navegacao {
+  width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-right: 100px;
 }
-.cabecario-navegacao ul {
+.cabecalho-navegacao ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  gap: 40px;
+  gap: 10px;
   padding: 10px;
 }
 
-.cabecario-navegacao a {
+.cabecalho-navegacao a {
   text-decoration: none;
   color: var(--font-titulo);
   font-weight: bold;
@@ -65,7 +65,7 @@
   border-radius: 30px;
 }
 
-.cabecario-banner img {
+.cabecalho-banner img {
   width: 100%;
   height: 600px;
   display: block;
@@ -74,11 +74,11 @@
   background-size: cover;
 }
 
-.cabecario-banner {
+.cabecalho-banner {
   position: relative;
 }
 
-.cabecario-banner .titulo1 {
+.titulo1 {
   position: absolute;
   top: 150px;
   left: 500px;
@@ -89,7 +89,7 @@
   background-color: var(--fundo-desfocada);
 }
 
-.cabecario-banner .titulo2 {
+.titulo2 {
   position: absolute;
   top: 220px;
   left: 570px;
@@ -100,7 +100,7 @@
   background-color: var(--fundo-desfocada);
 }
 
-.botao{
+.botao {
   position: fixed;
   bottom: 40px;
   right: 10px;
@@ -108,10 +108,9 @@
   height: 60px;
   background-color: rgb(243, 135, 220);
   border-radius: 50%;
-
 }
 
-.botao img{
+.botao img {
   width: 100%;
 }
 
@@ -135,10 +134,9 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.servico-tipo .depoimento-paragrafo{
+.servico-tipo .depoimento-paragrafo {
   width: 100%;
   height: auto;
-  
 }
 
 .servico-tipo h3 {
@@ -154,15 +152,15 @@
   justify-content: space-around;
   align-items: center;
   padding: 40px;
-  background: linear-gradient(to right, var(--paragrafos), var(--bordas));
+  background: linear-gradient(to right, var(--cor1gradiente), var(--bordas));
 }
 
 .principal-sobre p {
   font-size: 20px;
-  color: var(--font-titulo);
+  color: var(--paragrafos);
   line-height: 32px;
   width: 90%;
-  flex: 1;;
+  flex: 1;
   padding: 10px;
 }
 
@@ -174,12 +172,11 @@
   border-radius: 50%;
 }
 
-.container-servicos .container-depoimentos{
+.container-servicos .container-depoimentos {
   width: 100%;
   height: auto;
   padding-bottom: 80px;
 }
-
 
 .servicos-imagem {
   width: 1200px;
@@ -194,7 +191,7 @@
   box-shadow: 0px 0px 10px 5px var(--fundo-desfocada);
 }
 
-.cilios-estilos  {
+.cilios-estilos {
   border: 1px solid var(--bordas);
   display: flex;
   flex-wrap: wrap;
@@ -231,9 +228,8 @@
   text-align: left;
   line-height: 24px;
   padding: 20px;
-  
 }
-.servicos-imagem  .paragrafo-cilios {
+.servicos-imagem .paragrafo-cilios {
   line-height: 34px;
   padding: 50px 10px;
 }
@@ -255,44 +251,79 @@
   padding-bottom: 10px;
 }
 
-
-
 .depoimento-paragrafo {
   max-width: 100%;
   padding-top: 40px;
-  background: linear-gradient(to right, var(--paragrafos), var(--bordas));
-
+  background: linear-gradient(to right, var(--cor1gradiente), var(--bordas));
 }
 
-.depoimento-paragrafo p{
-  color: var(--font-titulo);
+.depoimento-paragrafo p {
+  color: var(--paragrafos);
   margin: 0 auto;
   width: 80%;
-  font-size:  26px;
+  font-size: 26px;
   text-align: center;
 }
 
-
-
-.depoimento-imagens{
+.depoimento-imagens {
   height: auto;
   display: flex;
   justify-content: space-between;
   gap: 10px;
   margin: 0 auto;
   padding: 40px 10px;
-  background: linear-gradient(to right, var(--paragrafos), var(--bordas));
-  
+  background: linear-gradient(to right, var(--cor1gradiente), var(--bordas));
 }
 
-.depoimento-imagens img{
+.depoimento-imagens img {
   width: 100%;
   height: auto;
   border: 1px solid var(--bordas);
   border-radius: 8px;
   object-fit: cover;
-
-  
 }
 
+.localizacao-map p{
+  font-size: 30px;
+  color: var(--paragrafos);
+  font-weight: bold;
+  padding-bottom: 40px;
+}
 
+.localizacao-map{
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.container-rodape{
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  text-align: center;
+}
+
+.rodape-rede-social img{
+  width: 50px;
+  padding-top: 30px;
+}
+
+.rodape-contatos{
+  width: 1200px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.rodape-contatos li{
+  width: 250px;
+  list-style: none;
+  padding: 10px;
+}
+
+.rodape-contatos a{ 
+  font-size: 18px;
+  color: var(--font-titulo);
+  text-decoration: none;
+}
