@@ -7,7 +7,7 @@
 }
 
 :root {
-  --fundo-desfocada: rgba(236, 68, 124, 0.342);
+  --fundo-desfocada: rgba(236, 68, 124, 0.075);
   --font-titulo: #fff;
   --paragrafos: rgb(140, 35, 182);
   --bordas: #f4db;
@@ -50,7 +50,7 @@
 .cabecalho-navegacao ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
@@ -70,7 +70,7 @@
   color: rgb(48, 42, 42);
   border-top: 1px solid rgb(48, 42, 42);
   border-bottom: 3px solid rgb(48, 42, 42);
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .cabecalho-banner img {
@@ -86,28 +86,29 @@
   position: relative;
 }
 
-.container-intro{
+.container-intro {
   position: absolute;
   width: auto;
   height: auto;
   top: 150px;
   left: 500px;
   padding: 10px;
+  border-radius: 10px;
+  background-color: var(--fundo-desfocada);
+  backdrop-filter: blur(10px);
 }
 
 .titulo1 {
-  font-size: 50px;
+  font-size: 3.5em;
   color: var(--font-titulo);
   border-radius: 10px;
-  background-color: var(--fundo-desfocada);
 }
 
 .titulo2 {
-  font-size: 50px;
+  font-size: 3.5em;
   color: var(--font-titulo);
   text-align: right;
   border-radius: 10px;
-  background-color: var(--fundo-desfocada);
 }
 
 .botao {
@@ -194,12 +195,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
   margin: 0 auto;
   padding: 10px;
-  border: 3px solid var(--bordas);
   border-radius: 8px;
-  box-shadow: 0px 0px 10px 5px var(--fundo-desfocada);
 }
 
 .cilios-estilos {
@@ -209,12 +208,13 @@
   padding-bottom: 20px;
   border-radius: 8px;
   background: linear-gradient(to top, var(--bordas), #ffe4ec);
+  box-shadow: 5px 5px 15px 0.5px rgba(0, 0, 0, 0.5);
 }
 
 .servicos-imagem figure {
-  max-width: 300px;
-  max-height: 300px;
-  text-align: cente;
+  max-width: 200px;
+  max-height: 200px;
+  text-align: center;
   padding: 10px;
 }
 
@@ -357,10 +357,9 @@
     /* Centraliza o conteúdo */
   }
 
-  .container-intro{
+  .container-intro {
     left: 40%;
   }
-  
 
   .servicos-imagem,
   .rodape-contatos {
@@ -373,26 +372,38 @@
     height: 40px;
   }
 
-    .servicos-imagem {
-      max-width: 100%;
-      margin: 0px;
-    }
-
-    .cilios-estilos {
-      border: 3px solid red;
-      width: 450px;
-      height: 250px;
-    }
-    
-    .cilios-estilos figure {
-      width: 35%;
-      height: 70%;
-    }
-
-    .cilios-estilos .paragrafo-cilios {
-      width: 60%;
-    }
+  .servicos-imagem {
+    max-width: 100%;
+    margin: 0px;
   }
+
+  .cilios-estilos {
+    width: calc(45%);
+    height: auto;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .cilios-estilos figure {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cilios-estilos img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .cilios-estilos .paragrafo-cilios {
+    width: 100%;
+    font-size: 1em;
+    line-height: 22px;
+    padding: 10px;
+  }
+}
 
 @media (max-width: 768px) and (min-width: 375px) {
   .container-cabecalho {
@@ -415,14 +426,14 @@
   }
 
   .cabecalho-navegacao a {
-    font-size: 14px;
+    font-size: 1em;
   }
 
   .cabecalho-banner img {
     background-size: cover;
   }
 
-  .container-intro{
+  .container-intro {
     left: 40%;
   }
 
@@ -436,7 +447,7 @@
   .botao {
     width: 40px;
     height: 40px;
-    right: 40px;
+    right: 10px;
     bottom: 20px;
   }
 
@@ -476,35 +487,38 @@
   }
 
   .servicos-imagem {
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin: 0;
     border: none;
   }
 
-  .cilios-estilos{
-    max-width: calc(50%);
+  .cilios-estilos {
+    width: calc(45%);
     height: auto;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
   }
+  .cilios-estilos figure {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   .cilios-estilos img {
-    width: calc(50% -10);
-    max-width: 100%;
+    width: 80%;
+    height: 80%;
   }
 
   .cilios-estilos .paragrafo-cilios {
-    width: 50%;
+    width: 100%;
     font-size: 1em;
     line-height: 22px;
     padding: 10px;
-  }
-
-  .cilios-estilos img {
-    width: 100%;
-    height: 100%;
   }
 
   .sobrancelha-estilo {
@@ -514,15 +528,15 @@
     align-items: center;
   }
 
-  .sobrancelha-estilo figure{
+  .sobrancelha-estilo figure {
     width: 150px;
     height: 150px;
     padding: 0;
   }
 
-  .sobrancelha-estilo figcaption{
-    width: 250px;
-    text-align: left;
+  .sobrancelha-estilo figcaption {
+    width: 120%;
+    text-align: center;
   }
 
   .sobrancelha-estilo p {
@@ -535,8 +549,154 @@
     padding: 20px 0;
   }
 
-  .rodape-contatos{
+  .rodape-contatos {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  
+  .container-cabecalho{
+    width: 100%;
+    
+  }
+
+  .cabecalho-logo{
+    display: none;
+  }
+
+  .cabecalho-navegacao ul{
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cabecalho-navegacao a {
+    font-size: 14px;
+  }
+  .cabecalho-banner img {
+    display: none;  
+  }
+
+  .container-intro{
+    left: 0px;
+    position: static;
+    border-radius: 0;
+    margin-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .titulo1{
+    font-size: 2.5em;
+  }
+
+  .titulo2{
+    font-size: 2.5em;
+  }
+
+  .botao{
+    width: 40px;
+    height: 40px;
+    right: 10PX;
+  }
+
+  .container-titulos{
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+  }
+
+  .container-titulos h2{
+    font-size: 1.9em;
+    padding: 30px;
+  }
+
+  .servico-tipo{
+    width: 100%;
+    height: auto;
+  }
+
+  .servico-tipo h3{
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .servicos-imagem{
+    flex-direction: column;
+  }
+
+  .cilios-estilos{
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .cilios-estilos img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .cilios-estilos .paragrafo-cilios{
+    width: 100%; /* Centraliza verticalmente */
+    text-align: center; /* Garante que o texto dentro fique alinhado */
+  }
+
+  .principal-sobre{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .principal-sobre p{
+    font-size: 0.9em;
+    line-height: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  .principal-imagem img{
+    display: none;
+  }
+
+
+  .servicos-imagem{
+    width: 100%;
+  }
+
+  .cilios-estilos .paragrafo-cilios {
+    width: 100%;
+    font-size: 0.9em;
+    line-height: 22px;
+    padding: 10px;
+  }
+
+  .sobrancelha-estilo{
+    width: 100%;
+  }
+
+  .sobrancelha-estilo p{
+    width: 90%;
+    font-size: 0.9em;
+    padding: 10px 0px;
+    text-align: center;
+  }
+
+  .depoimento-paragrafo{
+    width: 100%;
+  }
+
+  .depoimento-paragrafo p{
+    width: 100%;
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+  .depoimento-imagens{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rodape-contatos{
+    flex-direction: column;
+    width: 100%;
   }
 }
