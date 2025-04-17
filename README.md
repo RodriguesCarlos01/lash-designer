@@ -4,7 +4,25 @@ Landing page desenvolvida para divulgação dos serviços de extensão de cílio
 
 ## 🌐 Demonstração
 
-🔗 [Acessar o site](https://seu-link-no-vercel.vercel.app) *(coloque aqui o link depois que publicar no Vercel)*
+🔗 [Acessar o site](https://lash-designer-one.vercel.app/) Acesse o site através deste link!
+
+### 🖥️ Desktop 
+<p align="left">
+  <img src="./img/desktop-1.png" alt="Imagem 1" width="300" height="200"/>
+  <img src="./img/desktop-2.png" alt="Imagem 2" width="300" height="200"/>
+</p>
+
+### 💻 Tablet
+<p align="left">
+  <img src="./img/tablet-1.png" alt="Imagem 1" width="250" height="200"/>
+  <img src="./img/tablet-2.png" alt="Imagem 2" width="250" height="200"/>
+</p>
+
+### 📱 Celular
+<p align="left">
+  <img src="./img/celular-1.png" alt="Imagem 1" width="120" height="200"/>
+  <img src="./img/celular-2.png" alt="Imagem 2" width="120" height="200"/>
+</p>
 
 ## 📌 Objetivo
 
