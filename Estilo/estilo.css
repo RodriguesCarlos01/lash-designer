@@ -84,7 +84,7 @@
   cursor: pointer;
   position: absolute;
   top: 30px;
-  right: 30px;
+  right: 20px;
   z-index: 1000;
 }
 
@@ -220,7 +220,6 @@
   border: 1px solid var(--bordas);
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 20px;
   border-radius: 8px;
   background: linear-gradient(to top, var(--bordas), #ffe4ec);
   box-shadow: 5px 5px 15px 0.5px rgba(0, 0, 0, 0.5);
@@ -230,6 +229,7 @@
   max-width: 200px;
   max-height: 200px;
   text-align: center;
+  gap: 20px;
   padding: 10px;
 }
 
@@ -268,14 +268,13 @@
 }
 .sobrancelha-estilo img {
   width: 150px;
-  height: auto;
+  height: 150px;
 }
 
 .sobrancelha-estilo p {
   width: 60%;
   text-align: left;
   color: var(--paragrafos);
-  padding-bottom: 10px;
 }
 
 .depoimento-paragrafo {
@@ -372,11 +371,9 @@ footer {
 }
 
 /*responsividade para notebook */
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .container-cabecalho {
     width: 100%;
-    /* Centraliza o conteúdo */
   }
 
   .container-intro {
@@ -403,7 +400,6 @@ footer {
     width: calc(45%);
     height: auto;
     justify-content: center;
-    padding: 10px;
   }
 
   .cilios-estilos figure {
@@ -412,25 +408,49 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 0 0 0;
   }
 
   .cilios-estilos img {
     width: 80%;
     height: 80%;
   }
+  .cilios-estilos .paragrafo-cilios{
+    padding: 20px;
+  }
 
-  .cilios-estilos .paragrafo-cilios {
+  .cilios-estilos p {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 22px;
-    padding: 10px;
+  }
+
+  .depoimento-imagens{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 0 auto;
+    justify-content: center;
+  }
+
+  .depoimento-imagens figure{
+    width: calc(50% - 10px);
+    margin: 0;
+  }
+
+  .depoimento-imagens img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
   }
 }
 
+/* responsividade para tablet */
 @media screen and (max-width: 768px) {
   .container-cabecalho {
     width: 100%;
-    /* Centraliza o conteúdo */
   }
 
   .cabecalho-logo {
@@ -442,9 +462,10 @@ footer {
     flex-direction: column;
     background-color: #d7b4df;
     position: absolute;
-    top: 20px;
+    top: 70px;
     right: 0;
-    width: 75%;
+    left: 0;
+    width: 100%;
     height: auto;
     text-align: center;
     z-index: 999;
@@ -463,6 +484,7 @@ footer {
   .cabecalho-navegacao ul {
     flex-direction: column;
     align-items: center;
+    border: 3px solid var(--paragrafos);
   }
 
   .hamburger {
@@ -503,7 +525,7 @@ footer {
   }
 
   .principal-sobre p {
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 22px;
   }
 
@@ -533,7 +555,8 @@ footer {
     width: calc(45%);
     height: auto;
     justify-content: center;
-    padding: 10px;
+    gap: 30px;
+    padding-top: 20px;
   }
   .cilios-estilos figure {
     width: 70%;
@@ -576,7 +599,7 @@ footer {
   .sobrancelha-estilo p {
     text-align: center;
     width: 90%;
-    padding: 0px;
+    padding: 10px;
   }
 
   .container-depoimentos {
@@ -589,6 +612,7 @@ footer {
   }
 }
 
+/* responsividade para celular */
 @media screen and (max-width: 500px) {
   .cabecalho-banner img,
   .principal-imagem img {
@@ -601,8 +625,37 @@ footer {
     border-radius: 0;
     background: var(--paragrafos)
   }
+
+  .depoimento-paragrafo {
+    width: 100%;
+  }
+
+  .depoimento-paragrafo p {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 0 10px;
+  }
+  .depoimento-imagens {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .depoimento-imagens figure{
+    width: 100%;
+  }
+
+  .sobrancelha-estilo {
+    width: 100%;
+    height: 350px;
+  }
+
+  .cilios-estilos img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
+/* responsividade para celular */
 @media screen and (max-width: 375px) {
   .container-cabecalho {
     width: 100%;
@@ -670,6 +723,7 @@ footer {
 
   .cilios-estilos {
     width: 100%;
+    height: auto;
     flex-direction: column;
     align-items: center;
     gap: 5px;
@@ -691,7 +745,7 @@ footer {
   }
 
   .principal-sobre p {
-    font-size: 0.9em;
+    font-size: 1.1em;
     line-height: 22px;
     margin: 0 auto;
     padding: 10px 0;
@@ -707,19 +761,19 @@ footer {
 
   .cilios-estilos .paragrafo-cilios {
     width: 100%;
-    font-size: 0.9em;
+    font-size: 1.1em;
     line-height: 22px;
     padding: 10px;
   }
 
   .sobrancelha-estilo {
     width: 100%;
+    height: 350px;
   }
 
   .sobrancelha-estilo p {
     width: 90%;
-    font-size: 0.9em;
-    padding: 10px 0px;
+    font-size: 1.1em;
     text-align: center;
   }
 
@@ -729,7 +783,7 @@ footer {
 
   .depoimento-paragrafo p {
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 0 10px;
   }
   .depoimento-imagens {
