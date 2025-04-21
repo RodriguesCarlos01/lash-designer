@@ -342,7 +342,7 @@
   padding-top: 30px;
 }
 
-.rodape-contatos {
+.rodape-contatos ul{
   width: 1200px;
   height: 100px;
   display: flex;
@@ -444,6 +444,10 @@ footer {
     height: auto;
     display: block;
     border-radius: 20px;
+  }
+
+  .rodape-contatos ul{
+    width: 100%;
   }
 }
 
@@ -606,7 +610,8 @@ footer {
     padding: 20px 0;
   }
 
-  .rodape-contatos {
+  .rodape-contatos ul{
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -789,10 +794,5 @@ footer {
   .depoimento-imagens {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .rodape-contatos {
-    flex-direction: column;
-    width: 100%;
   }
 }
